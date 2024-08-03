@@ -34,7 +34,7 @@ pip install openbb-equity openbb-derivatives
 
 ## Usage
 
-With `setup.py`, the package are all installed in "editable" mode. Any changes to the "empty" extensions code, in the "extensions" folder, will be reflected upon restarting the Python interpreter.
+With `dev_install.py`, the contents of the `/extensions` folder are installed in "editable" mode. Any changes will be reflected upon restarting the Python interpreter.
 
 After installing a new provider or router path, rebuild the static assets:
 
@@ -45,6 +45,7 @@ python -c "import openbb;openbb.build()"
 ### Python
 
 Importing and operating are the same as with any other `openbb` installation; only here, there are no data providers or router paths included.
+The `empty` paths are working starting points that to replace with your code.
 
 ```python
 from openbb import obb
@@ -64,7 +65,7 @@ openbb-api
 
 ## Developing
 
-Open the `empty` extension folders and examine the code to see how the pieces interact.
+Open the `/extensions` folder and examine the code to see how the pieces interact.
 If your code changes are not being reflected after reloading the Python interpreter,
 try rebuilding the assets:
 
