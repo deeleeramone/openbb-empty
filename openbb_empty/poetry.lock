@@ -6923,9 +6923,8 @@ doc = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "rst.linke
 test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", "jaraco.test", "more-itertools", "pytest (>=6,!=8.1.*)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ignore-flaky", "pytest-mypy", "pytest-ruff (>=0.2.1)"]
 
 [extras]
-all = ["openbb-charting", "openbb-cli", "openbb-empty-obbject", "openbb-empty-provider", "openbb-empty-router"]
+all = ["openbb-charting", "openbb-empty-obbject", "openbb-empty-provider", "openbb-empty-router"]
 charting = ["openbb-charting"]
-cli = ["openbb-cli"]
 obbject = ["openbb-empty-obbject"]
 provider = ["openbb-empty-provider"]
 router = ["openbb-empty-router"]
@@ -6933,4 +6932,4 @@ router = ["openbb-empty-router"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10,<3.13"
-content-hash = "742bb42c960276e9d41ade4aa9b7146831d6ce1d554d7aae84f8c4a7eed92e48"
+content-hash = "04886425b6a768c7f09ae2d98beb200ead8958ab33b87563bb712853a45ad452"

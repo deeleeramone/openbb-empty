@@ -22,14 +22,12 @@ openbb-empty-provider = { url = "https://github.com/deeleeramone/openbb-empty/ra
 openbb-empty-router = { url = "https://github.com/deeleeramone/openbb-empty/raw/main/openbb_empty/extensions/empty_router_extension/dist/openbb_empty_router-0.0.1.tar.gz", optional = true }
 
 [tool.poetry.extras]
-cli = ["openbb-cli"]
 charting = ["openbb-charting"]
 obbject = ["openbb-empty-obbject"]
 provider = ["openbb-empty-provider"]
 router = ["openbb-empty-router"]
 
 all = [
-    "openbb-cli",
     "openbb-charting",
     "openbb-empty-obbject",
     "openbb-empty-provider",
