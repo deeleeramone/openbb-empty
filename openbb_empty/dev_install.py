@@ -5,7 +5,7 @@
 import os
 
 
-def main(charting):
+def main(extras):
     """Run the setup script."""
     # pylint: disable=import-outside-toplevel
     import glob
@@ -14,8 +14,8 @@ def main(charting):
     subprocess.check_call([os.sys.executable, "-m", "pip", "install", "-U", "pip", "setuptools", "poetry"])
 
     subprocess.check_call(
-        [os.sys.executable, "-m", "poetry", "install", "-E", "charting"]
-        if charting
+        [os.sys.executable, "-m", "poetry", "install", "-E", extras]
+        if extras
         else [os.sys.executable, "-m", "poetry", "install"]
     )
 
@@ -38,5 +38,5 @@ def main(charting):
 
 
 if __name__ == "__main__":
-    charting = os.sys.argv[1] == "charting" if len(os.sys.argv) > 1 else False
-    main(charting)
+    extras = os.sys.argv[1] if len(os.sys.argv) > 1 else ""
+    main(extras)

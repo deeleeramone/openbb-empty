@@ -19,6 +19,8 @@ python openbb_empty/dev_install.py
 
 Items within the "extensions/" folder will be installed by `dev_install.py`, but not by `poetry install`.
 
+The "extras" listed in the PyPI section below are installable by adding the name - i.e, `dev_install.py notebook`
+
 ### PyPI
 
 ```console
@@ -37,7 +39,13 @@ Add PyWry for Pythonic window creation.
 pip install openbb-empty["pywry"]
 ```
 
-### Additional Modules
+Add Jupyter Notebook.
+
+```console
+pip install openbb-empty["notebook"]
+```
+
+### Adding OpenBB Modules
 
 Install data provider extensions individually, for example:
 
@@ -64,7 +72,7 @@ python -c "import openbb;openbb.build()"
 ### Python
 
 Importing and operating are the same as with any other `openbb` installation; only here, there are no data providers or router paths included.
-The `empty` paths are working starting points that to replace with your code.
+The `empty` paths are working starting points to replace with your code.
 
 ```python
 from openbb import obb
