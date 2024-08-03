@@ -1,11 +1,9 @@
 # Empty OpenBB
 
-This is an empty OpenBB container with provider, router, and OBBject extension shells.
-
-Only the OpenBB infrastructure is included (+ Charting), and a Jupyter Notebook server with IPython kernel.
+Only the core OpenBB infrastructure is included (optional Charting, Jupyter Notebook).
 
 The repository is intended to be cloned as a lightweight development environment. 
-Alternative, use `pip install` to install a core application shell with build and launch scripts.
+Alternatively, use `pip install` to install a core application shell with build and launch scripts.
 
 ## Installation
 

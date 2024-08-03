@@ -1,9 +1,9 @@
 # Empty OpenBB
 
-Only the core OpenBB infrastructure is included (optional Charting), Jupyter Notebook, and IPython.
+Only the core OpenBB infrastructure is included (optional Charting, Jupyter Notebook).
 
 The repository is intended to be cloned as a lightweight development environment. 
-Alternative, use `pip install` to install a core application shell with build and launch scripts.
+Alternatively, use `pip install` to install a core application shell with build and launch scripts.
 
 ## Installation
 
