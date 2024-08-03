@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "openbb-empty-router"
+version = "0.0.1"
+description = "An empty OpenBB Router extension"
+authors = ["OpenBB Team <hello@openbb.co>"]
+readme = "README.md"
+packages = [{ include = "openbb_empty_router" }]
+
+[tool.poetry.dependencies]
+python = "^3.9,<3.13"
+openbb-core = "^1.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins."openbb_core_extension"]
+empty = "openbb_empty_router.empty_router:router"
