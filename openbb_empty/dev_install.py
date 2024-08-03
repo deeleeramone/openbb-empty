@@ -38,6 +38,5 @@ def main(charting):
 
 
 if __name__ == "__main__":
-    if len(os.sys.argv) > 1:
-        charting = os.sys.argv[1] == "charting"
+    charting = os.sys.argv[1] == "charting" if len(os.sys.argv) > 1 else False
     main(charting)
