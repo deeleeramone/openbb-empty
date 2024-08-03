@@ -1,16 +1,15 @@
 # Empty OpenBB
 
-This is an empty OpenBB container with provider, router, and OBBject extension shells.
+Only the core OpenBB infrastructure is included (optional Charting), Jupyter Notebook, and IPython.
 
-Only the OpenBB infrastructure is included (+ Charting), and a Jupyter Notebook server with IPython kernel.
+The repository is intended to be cloned as a lightweight development environment. 
+Alternative, use `pip install` to install a core application shell with build and launch scripts.
 
 ## Installation
 
-A Python environment must first be created and activated. Use your preferred environment manager to create the Python environment.
+A Python environment needs to be created and activated. Use your preferred environment manager to create the Python environment.
 
 ### From Source
-
-From the root of the project, run:
 
 Clone the repository, and then from the root of the project, run:
 
@@ -18,9 +17,27 @@ Clone the repository, and then from the root of the project, run:
 python openbb_empty/dev_install.py
 ```
 
-### Additional Modules
+Items within the "extensions/" folder will be installed by `dev_install.py`, but not by `poetry install`.
 
-Extensions within the "extensions/" folder will be installed by `dev_setup.py`, but not by `poetry install`.
+### PyPI
+
+```console
+pip install openbb-empty
+```
+
+Install with the charting library:
+
+```console
+pip install openbb-empty["charting"]
+```
+
+Add PyWry for Pythonic window creation.
+
+```console
+pip install openbb-empty["pywry"]
+```
+
+### Additional Modules
 
 Install data provider extensions individually, for example:
 
@@ -36,7 +53,7 @@ pip install openbb-equity openbb-derivatives
 
 ## Usage
 
-With `setup.py`, the package are all installed in "editable" mode. Any changes to the "empty" extensions code, in the "extensions" folder, will be reflected upon restarting the Python interpreter.
+With `dev_install.py`, the contents of the `/extensions` folder are installed in "editable" mode. Any changes will be reflected upon restarting the Python interpreter.
 
 After installing a new provider or router path, rebuild the static assets:
 
@@ -47,6 +64,7 @@ python -c "import openbb;openbb.build()"
 ### Python
 
 Importing and operating are the same as with any other `openbb` installation; only here, there are no data providers or router paths included.
+The `empty` paths are working starting points that to replace with your code.
 
 ```python
 from openbb import obb
@@ -64,9 +82,9 @@ Launch the Fast API server by opening a Terminal command line and activating the
 openbb-api
 ```
 
-### Developing
+## Developing
 
-Open the `empty` extension folders and examine the code to see how the pieces interact.
+Open the `/extensions` folder and examine the code to see how the pieces interact.
 If your code changes are not being reflected after reloading the Python interpreter,
 try rebuilding the assets:
 
