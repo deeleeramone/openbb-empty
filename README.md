@@ -4,6 +4,9 @@ This is an empty OpenBB container with provider, router, and OBBject extension s
 
 Only the OpenBB infrastructure is included (+ Charting), and a Jupyter Notebook server with IPython kernel.
 
+The repository is intended to be cloned as a lightweight development environment. 
+Alternative, use `pip install` to install a core application shell with build and launch scripts.
+
 ## Installation
 
 A Python environment needs to be created and activated. Use your preferred environment manager to create the Python environment.
@@ -16,9 +19,27 @@ Clone the repository, and then from the root of the project, run:
 python openbb_empty/dev_install.py
 ```
 
-### Additional Modules
+Items within the "extensions/" folder will be installed by `dev_install.py`, but not by `poetry install`.
 
-Extensions within the "extensions/" folder will be installed by `dev_install.py`, but not by `poetry install`.
+### PyPI
+
+```console
+pip install openbb-empty
+```
+
+Install with the charting library:
+
+```console
+pip install openbb-empty["charting"]
+```
+
+Add PyWry for Pythonic window creation.
+
+```console
+pip install openbb-empty["pywry"]
+```
+
+### Additional Modules
 
 Install data provider extensions individually, for example:
 
