@@ -15,12 +15,12 @@ From the root of the project, run:
 Clone the repository, and then from the root of the project, run:
 
 ```console
-python openbb_empty/setup.py
+python openbb_empty/dev_install.py
 ```
 
 ### Additional Modules
 
-Any additional items extensions within the "extensions/" folder will be installed by `setup.py`, but not by `poetry install`.
+Extensions within the "extensions/" folder will be installed by `dev_setup.py`, but not by `poetry install`.
 
 Install data provider extensions individually, for example:
 
