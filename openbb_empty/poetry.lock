@@ -2695,49 +2695,52 @@ types-toml = ">=0.10.8.7,<0.11.0.0"
 name = "openbb-empty-obbject"
 version = "0.0.1"
 description = "An empty OBBject extension"
-optional = false
-python-versions = "^3.9,<3.13"
-files = []
-develop = true
+optional = true
+python-versions = ">=3.9,<3.13"
+files = [
+    {file = "openbb_empty_obbject-0.0.1.tar.gz", hash = "sha256:10a2d8742de3b07981df34c811b796aeada3f6135f2d8ba326e22996e9cba2df"},
+]
 
 [package.dependencies]
-openbb-core = "^1.3.0"
+openbb-core = ">=1.3.0,<2.0.0"
 
 [package.source]
-type = "directory"
-url = "extensions/empty_obbject_extension"
+type = "url"
+url = "https://github.com/deeleeramone/openbb-empty/raw/main/openbb_empty/extensions/empty_obbject_extension/dist/openbb_empty_obbject-0.0.1.tar.gz"
 
 [[package]]
 name = "openbb-empty-provider"
 version = "0.0.1"
 description = "Empty provider extension for OpenBB"
-optional = false
-python-versions = "^3.9,<3.13"
-files = []
-develop = true
+optional = true
+python-versions = ">=3.9,<3.13"
+files = [
+    {file = "openbb_empty_provider-0.0.1.tar.gz", hash = "sha256:c127144b85a5c61534fce930841ddf0def075b7b046f0a717cf5e69d1c52ae3b"},
+]
 
 [package.dependencies]
-openbb-core = "^1.3.0"
+openbb-core = ">=1.3.0,<2.0.0"
 
 [package.source]
-type = "directory"
-url = "extensions/empty_provider_extension"
+type = "url"
+url = "https://github.com/deeleeramone/openbb-empty/raw/main/openbb_empty/extensions/empty_provider_extension/dist/openbb_empty_provider-0.0.1.tar.gz"
 
 [[package]]
 name = "openbb-empty-router"
 version = "0.0.1"
 description = "An empty OpenBB Router extension"
-optional = false
-python-versions = "^3.9,<3.13"
-files = []
-develop = true
+optional = true
+python-versions = ">=3.9,<3.13"
+files = [
+    {file = "openbb_empty_router-0.0.1.tar.gz", hash = "sha256:1fdb7c6d0f9979e96a565d17524910b2ffc01027b5ba2e519eb6e372bbe32f96"},
+]
 
 [package.dependencies]
-openbb-core = "^1.3.0"
+openbb-core = ">=1.3.0,<2.0.0"
 
 [package.source]
-type = "directory"
-url = "extensions/empty_router_extension"
+type = "url"
+url = "https://github.com/deeleeramone/openbb-empty/raw/main/openbb_empty/extensions/empty_router_extension/dist/openbb_empty_router-0.0.1.tar.gz"
 
 [[package]]
 name = "overrides"
@@ -5408,10 +5411,13 @@ doc = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "rst.linke
 test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", "jaraco.test", "more-itertools", "pytest (>=6,!=8.1.*)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ignore-flaky", "pytest-mypy", "pytest-ruff (>=0.2.1)"]
 
 [extras]
-all = ["openbb-charting"]
+all = ["openbb-charting", "openbb-empty-obbject", "openbb-empty-provider", "openbb-empty-router"]
 charting = ["openbb-charting"]
+obbject = ["openbb-empty-obbject"]
+provider = ["openbb-empty-provider"]
+router = ["openbb-empty-router"]
 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10,<3.13"
-content-hash = "972bfa96c5f135e3321a594b55b9174d3aadd9048205ad4d09d97e488724e79f"
+content-hash = "d27104b943aae3efb7275494f05f7fcff38c3c84f26eafe3c16b246a26f61ab2"

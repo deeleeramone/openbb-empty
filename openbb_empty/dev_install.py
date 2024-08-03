@@ -16,7 +16,7 @@ def main(charting):
     subprocess.check_call([os.sys.executable, "-m", "pip", "install", "poetry"])
 
     subprocess.check_call(
-        [os.sys.executable, "-m", "poetry", "install", "-E", "all"]
+        [os.sys.executable, "-m", "poetry", "install", "-E", "charting"]
         if charting
         else [os.sys.executable, "-m", "poetry", "install"]
     )
@@ -36,9 +36,7 @@ def main(charting):
     directories = [
         os.path.join(base_dir, d)
         for d in os.listdir(base_dir)
-        if os.path.isdir(os.path.join(base_dir, d))
-        and glob.glob(os.path.join(base_dir, d, "*.toml"))
-        and not d.startswith("empty")
+        if os.path.isdir(os.path.join(base_dir, d)) and glob.glob(os.path.join(base_dir, d, "*.toml"))
     ]
 
     for directory in directories:
