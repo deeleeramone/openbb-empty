@@ -11,9 +11,7 @@ def main(charting):
     import glob
     import subprocess
 
-    subprocess.check_call([os.sys.executable, "-m", "pip", "install", "-U", "pip", "setuptools"])
-
-    subprocess.check_call([os.sys.executable, "-m", "pip", "install", "poetry"])
+    subprocess.check_call([os.sys.executable, "-m", "pip", "install", "-U", "pip", "setuptools", "poetry"])
 
     subprocess.check_call(
         [os.sys.executable, "-m", "poetry", "install", "-E", "charting"]
@@ -29,9 +27,9 @@ def main(charting):
     ]
 
     for directory in directories:
-        subprocess.check_call([os.sys.executable, "-m", "pip", "install", "-e", directory])
+        subprocess.check_call([os.sys.executable, "-m", "poetry", "install", "-C", directory])
 
-    subprocess.check_call([os.sys.executable, "-c", "import openbb;openbb.build()"])
+    subprocess.check_call([os.sys.executable, "-c", "import openbb;openbb.build(verbose=False)"])
 
     print(
         "\n\nOpenBB Platform Setup Complete. The Fast API can now be launched by entering: openbb-api\n\n"
