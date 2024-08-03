@@ -21,17 +21,6 @@ def main(charting):
         else [os.sys.executable, "-m", "poetry", "install"]
     )
 
-    subprocess.check_call(
-        [
-            os.sys.executable,
-            "-m",
-            "pip",
-            "install",
-            "openbb-platform-pro-backend",
-            "--no-deps",
-        ]
-    )
-
     base_dir = "extensions"
     directories = [
         os.path.join(base_dir, d)
