@@ -81,6 +81,7 @@ class EmptyFetcher(
             amake_requests,
             get_querystring,
         )  # Use these to make HTTP requests.
+
         # We import here so that items are imported on execution, not on initialization.
         # Critical for modules that introduce a heavy load on the system.
         # Generally, any module required for data retrieval and parsing should be 'lazy' imported.
