@@ -2,7 +2,7 @@
 name = "openbb-empty"
 version = "1.0.1"
 description = "An Empty OpenBB Configuration."
-authors = ["deeleeramone <hello@openbb.co>"]
+authors = ["deeleeramone <85772166+deeleeramone@users.noreply.github.com>"]
 readme = "README.md"
 packages = [{ include = "openbb" }]
 
